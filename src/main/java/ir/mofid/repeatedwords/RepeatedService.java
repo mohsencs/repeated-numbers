@@ -13,7 +13,7 @@ public class RepeatedService {
         BitSet bitSet = new BitSet(numbers.size());
 
         return numbers.stream()
-                .filter(Objects::nonNull) //TODO: write test
+                .filter(Objects::nonNull)
                 .map(number -> {
                             if (bitSet.get(number)) {
                                 return number;
@@ -22,8 +22,8 @@ public class RepeatedService {
                                 return null;
                             }
                         }
-                ).filter(Objects::nonNull) //TODO: write test
-                .distinct() //TODO: write test
+                ).filter(Objects::nonNull)
+                .distinct()
                 .collect(Collectors.toList());
     }
 }
